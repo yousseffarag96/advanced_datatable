@@ -10,10 +10,9 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  
 
 dev_dependencies:
-  test: 
+  test:
   flutter_test:
     sdk: flutter
   lint: ^1.7.2

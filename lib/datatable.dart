@@ -759,9 +759,7 @@ class PaginatedDataTableState extends State<AdvancedPaginatedDataTable> {
               dragStartBehavior: widget.dragStartBehavior,
               scrollDirection: Axis.horizontal,
               child: Row(
-                mainAxisAlignment: currentLocale == TextDirection.rtl
-                    ? MainAxisAlignment.end
-                    : MainAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.end,
                 children: footerWidgets,
               ),
             ),
