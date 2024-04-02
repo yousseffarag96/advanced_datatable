@@ -743,7 +743,7 @@ class PaginatedDataTableState extends State<AdvancedPaginatedDataTable> {
           IconButton(
             icon: const Icon(Icons.skip_previous),
             padding: EdgeInsets.zero,
-            onPressed: _firstRowIndex <= 0 ? null : _handleFirst,
+            onPressed: _isNextPageUnavailable() ? null : _handleLast,
           ),
         Container(width: 14.0),
       ]);
