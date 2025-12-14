@@ -706,16 +706,9 @@ class PaginatedDataTableState extends State<AdvancedPaginatedDataTable> {
           buildDataAmountText(),
         ),
         Container(width: 32.0),
-        if (widget.showFirstLastButtons && currentLocale == TextDirection.ltr)
+        if (widget.showFirstLastButtons  )
           IconButton(
-            icon: const Icon(Icons.skip_previous),
-            padding: EdgeInsets.zero,
-            onPressed: _firstRowIndex <= 0 ? null : _handleFirst,
-          )
-        else if (widget.showFirstLastButtons &&
-            currentLocale == TextDirection.rtl)
-          IconButton(
-            icon: const Icon(Icons.skip_next),
+            icon:  Icon(currentLocale == TextDirection.ltr?Icons.skip_previous:Icons.skip_next),
             padding: EdgeInsets.zero,
             onPressed: _firstRowIndex <= 0 ? null : _handleFirst,
           ),
@@ -732,16 +725,9 @@ class PaginatedDataTableState extends State<AdvancedPaginatedDataTable> {
           tooltip: localizations.nextPageTooltip,
           onPressed: _isNextPageUnavailable() ? null : _handleNext,
         ),
-        if (widget.showFirstLastButtons && currentLocale == TextDirection.ltr)
+        if (widget.showFirstLastButtons)
           IconButton(
-            icon: const Icon(Icons.skip_next),
-            padding: EdgeInsets.zero,
-            onPressed: _isNextPageUnavailable() ? null : _handleLast,
-          )
-        else if (widget.showFirstLastButtons &&
-            currentLocale == TextDirection.rtl)
-          IconButton(
-            icon: const Icon(Icons.skip_previous),
+            icon:  Icon(currentLocale == TextDirection.ltr?Icons.skip_next:Icons.skip_previous),
             padding: EdgeInsets.zero,
             onPressed: _isNextPageUnavailable() ? null : _handleLast,
           ),
